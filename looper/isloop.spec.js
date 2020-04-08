@@ -6,7 +6,7 @@ const isLoop = require('./isloop');
 const numbers = [1,2,3,4,5,6,7,8,9,10];
 const letters = ['a','b','c','d','e','f','g','h','i'];
 const emojis = ['🥚','🐣','🦅 ', '👾'];
-const smallNums = [0, 1, 2, 3, 4] //4.next = 1
+//const smallNums = [0, 1, 2, 3, 4] //4.next = 1
 
 //These LLs have loops!
 const test1 = new LinkedList();
@@ -32,7 +32,7 @@ describe('isLoop function', () => {
 		expect(isLoop(test2)).to.equal(true);
 	});
 
-	xit('returns false if linked list contains no loop', () =>{
+	it('returns false if linked list contains no loop', () =>{
 		expect(isLoop(test3)).to.equal(false);
 	});
 });

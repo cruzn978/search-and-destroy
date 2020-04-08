@@ -2,7 +2,21 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
+    let slowNode = linkedlist.head
+    let fastNode = linkedlist.head
 
+    while( fastNode && fastNode.next){
+        fastNode = fastNode.next.next
+        slowNode = slowNode.next
+
+        // console.log('SLOW----->',slowNode)
+        // console.log('FAST----->',fastNode)
+
+        if (slowNode === fastNode){
+            return true
+        }
+    }
+    return false
 };
 
 
